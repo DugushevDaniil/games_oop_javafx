@@ -27,7 +27,7 @@ public final class Logic {
             for (Figure figure : figures) {
                 if (figure != null
                         && figure.position().equals(step)) {
-                    throw new OccupiedCellException("The path to the cell is blocked by another figure");
+                    throw new OccupiedCellException("The cell is blocked by another figure");
                 }
             }
         }

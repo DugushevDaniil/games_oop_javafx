@@ -29,11 +29,11 @@ public class LogicTest {
             logic.add(new PawnBlack(Cell.E6));
             logic.move(Cell.C8, Cell.G4);
         });
-        assertThat(exception.getMessage()).isEqualTo("The path to the cell is blocked by another figure");
+        assertThat(exception.getMessage()).isEqualTo("The cell is blocked by another figure");
     }
 
     @Test
-    public void ImpossibleMoveException()
+    public void impossibleMoveException()
             throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
         Logic logic = new Logic();
         ImpossibleMoveException exception = assertThrows(ImpossibleMoveException.class, () -> {
